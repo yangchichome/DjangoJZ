@@ -4,7 +4,6 @@ from Insta.models import Post
 class HelloWorld(TemplateView):
     template_name = 'test.html'
 
-
 class PostsView(ListView):
     model = Post
     template_name = 'Index.html'
