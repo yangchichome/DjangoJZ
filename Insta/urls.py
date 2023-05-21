@@ -22,6 +22,3 @@ urlpatterns = [
     path('posts/', PostsView.as_view(), name='posts'),
     path('post/<int:pk>/', PostDetailView.as_view(), name='post_detail'),
 ]
-
-
-
