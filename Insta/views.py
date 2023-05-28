@@ -28,6 +28,11 @@ class PostUpdateView(UpdateView):
     template_name = 'post_update.html'
     fields = ['title']
 
+class PostDeleteView(DeleteView):
+    model = Post
+    template_name = 'post_delete.html'
+    success_url = reverse_lazy('home')
+
 class SignUp(CreateView):
     form_class = CustomUserCreationForm
     template_name = 'signup.html'
