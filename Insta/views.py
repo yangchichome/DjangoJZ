@@ -4,23 +4,24 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.contrib.auth.models import User
-from Insta.models import Post, Like, InstaUser
+from Insta.models import Post, Like, InstaUser, UserConnection
 from Insta.forms import CustomUserCreationForm
+from django.db.models import Q
 
 class HelloWorld(TemplateView):
     template_name = 'test.html'
 
-class PostsView(ListView):
+class PostsView(LoginRequiredMixin, ListView):
     model = Post
     template_name = 'Index.html'
+    login_url = "login"
 
     def get_queryset(self):
         current_user = self.request.user
-        following = set()
+        following = set([current_user])
         for conn in UserConnection.objects.filter(creator=current_user).select_related('following'):
             following.add(conn.following)
-        return Post.objects.filter(author__in=following)
-
+        return Post.objects.filter(Q(author__in=following) | Q(author=current_user))
 
 class PostDetailView(DetailView):
     model = Post
