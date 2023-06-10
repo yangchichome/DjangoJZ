@@ -1,18 +1,23 @@
-asgiref @ file:///C:/Users/BUILDE~1/AppData/Local/Temp/abs_cchykh5sgr/croots/recipe/asgiref_1661287542702/work
+asgiref==3.4.1
+Django==3.2.4
+sqlparse==0.4.1
+Pillow==8.3.1
+
+# asgiref @ file:///C:/Users/BUILDE~1/AppData/Local/Temp/abs_cchykh5sgr/croots/recipe/asgiref_1661287542702/work
 certifi==2023.5.7
 distlib==0.3.6
-Django @ file:///C:/Users/BUILDE~1/AppData/Local/Temp/abs_eeor5o9jj8/croots/recipe/django_1661292534510/work
+# Django @ file:///C:/Users/BUILDE~1/AppData/Local/Temp/abs_eeor5o9jj8/croots/recipe/django_1661292534510/work
 django-annoying==0.10.6
 django-appconf==1.0.5
 django-imagekit==4.1.0
 filelock==3.12.0
 gunicorn==20.1.0
 pilkit==2.0
-Pillow==9.5.0
+# Pillow==9.5.0
 pipenv==2023.6.2
 platformdirs==3.5.1
 six==1.16.0
-sqlparse @ file:///C:/b/abs_83jn6owfpc/croot/sqlparse_1668793499314/work
+# sqlparse @ file:///C:/b/abs_83jn6owfpc/croot/sqlparse_1668793499314/work
 tzdata @ file:///tmp/build/80754af9/python-tzdata_1611693927741/work
 virtualenv==20.23.0
 virtualenv-clone==0.5.7
